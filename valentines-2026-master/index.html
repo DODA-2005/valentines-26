@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Since the day I met you</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+<!-- 美观的导航栏 -->
+<nav>
+	<div class="logo">
+		<div class="dropdown">
+			<a href="#">Click here after reading this<span class="arrow">▼</span></a>
+			<div class="dropdown-content">
+				<a href="index.html" style="font-size: 16px;">Home</a>
+				<a href="love_hack.html" style="font-size: 16px;">I made this for you</a>
+				<a href="music_website/index.html" style="font-size: 16px;">Things I love bout u </a>
+			</div>
+		</div>
+	</div>
+
+</nav>
+<div id="mainDiv" style="margin-top: 80px;">
+	<div id="content">
+		<div id="code">
+			<span class="comments">##</span><br/>
+			<span class="comments"># Hey pretty baby,</span><br/>
+			<span class="comments"># Happy Valentine's Day.</span><br/>
+			<span class="comments">##</span><br/>
+			i = Bhondu Number 1(<span class="string">"DODA"</span>);<br/>
+			u = Bhondu Number 2(<span class="string">"Inuka"</span>);<br/>
+			<span class="comments"># Nov 03, 2022, I invited you to cycle with me <br> we got ditched by Raiden.</span><br/>
+			i.meet(u)<br/>
+			<span class="comments"># so it turned out to be a cute hangout.</span><br/>
+			cycled_togeth(u, i)<br/>
+			<span class="comments"># Dec 03, 2022, After a series of "probably dates" this day - we went to The White Rabbit</span><br/>
+			my_drip = sweater 😎<br>
+			wanted to give it to you = yes<br>
+			had the guts to do so = fuck no
+			<br/>
+			<span class="comments"># turned out to be a cute evening and the day we both would be each other's crush since</span><br/>
+			I used to think bout u all the damn time and was questioning myself throughout<br/>
+			<span class="comments"># Dec 15, 2022, My Birthday 🎉.</span><br/>
+			we flirted throughout these couple of week "ironically" - altho we both know we used to blush on it<br/>
+			<span class="comments"># Dec 28, 2022, You finally confess to me.</span><br/>
+			My stomach = (butterflies)<br/>
+			<span class="comments"># That was the most beautiful thing that happened in my life.</span><br/>
+			our_friendgroup=(flabbergasted)<br/>
+			<span class="comments"># And since then - after a thousand fucking ups and downs</span><br/>
+			together(u & i)<br/>
+			<span class="comments"># Sometimes there are a few conflicts between us.🥳</span><br/>
+			sad(u,i, <span class="keyword">=True</span>)<br/>
+			<span class="comments"># But we are getting more and more in balance together.</span><br/>
+			<span class="comments"># You are the greatest thing in my life.</span><br/>
+			<span class="comments"># And I wish to spend my whole life with you</span><br/>
+			Happy Third Valentine's sweetieee<br/>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Inika, I have fallen in love with you for
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					Love u forever and ever.<br/>
+					<div class="signature">- Doda</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+<script type="text/javascript">
+	var offsetX = $("#loveHeart").width() / 2;
+	var offsetY = $("#loveHeart").height() / 2 - 55;
+	var together = new Date();
+	// 此处月份介于 0 ~ 11 之间。用本地时间表示，如 8 月要用 7 表示。
+	together.setFullYear(2022, 12, 28);
+	together.setHours(15);
+	together.setMinutes(0);
+	together.setSeconds(0);
+	together.setMilliseconds(0);
+
+	
+
+	if (!document.createElement('canvas').getContext) {
+		var msg = document.createElement("div");
+		msg.id = "errorMsg";
+		msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+		document.body.appendChild(msg);
+		$("#code").css("display", "none")
+		$("#copyright").css("position", "absolute");
+		$("#copyright").css("bottom", "10px");
+		document.execCommand("stop");
+	} else {
+		setTimeout(function () {
+			startHeartAnimation();
+		}, 5000);
+
+		timeElapse(together);
+		setInterval(function () {
+			timeElapse(together);
+		}, 500);
+
+		adjustCodePosition();
+		$("#code").typewriter();
+	}
+</script>
+</body>
+</html>
