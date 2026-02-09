@@ -294,7 +294,7 @@ your original card style goes here */
 
 /* also prevents weird gray subtitles */
 .flip-card-back p{
-    opacity:0.95;
+    opacity:0.85;
 }
 
 
@@ -303,6 +303,7 @@ your original card style goes here */
     bottom:20px;
     font-size:22px;
     animation: floatUp 2s ease-out forwards;
+    opacity: 0.9;
 }
 
 @keyframes floatUp{
